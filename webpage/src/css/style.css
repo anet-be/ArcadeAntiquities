@@ -1,0 +1,84 @@
+@import url('https://use.typekit.net/jce1mqr.css');
+
+body, html {
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "cc-pixel-arcade-display", sans-serif;
+    color: #FFFFFF;
+}
+
+body {
+    background-image: url("http://localhost:8081/assets/background.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: transparent;
+    border-bottom: 0.1em solid black;
+    font-size: 2rem;
+    min-height: 10vh;
+    max-height: 10vh;
+}
+
+#assetsContainer {
+    border-right: 0.15em solid black;
+    font-size: 2rem;
+    max-width: 15em;
+    min-width: 15em;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+#all-not-chosen-game-versions{
+    border-right: 0.25em solid black;
+    max-width: 25em;
+    min-width: 25em;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.row{
+    min-height: 20vh;
+}
+.card {
+    background: transparent !important;
+}
+
+.modal-content{
+    background-image: url('http://localhost:8081/assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#canvas{
+    box-shadow: 10px 10px 10px black;
+}
+
+.retro {
+    background-image: url('http://localhost:8081/assets/background.jpg');
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 3px solid black;
+    padding: 10px 20px;
+    box-shadow: 4px 4px 0 black;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.retro:hover {
+    transform: scale(1.1);
+    box-shadow: 6px 6px 0 black;
+    background: black;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: #ccc; /* Optional: Change background color to indicate it's disabled */
+}

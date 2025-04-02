@@ -1,0 +1,45 @@
+#homeScreen {
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.game-option {
+    position: relative;
+}
+
+.game-option a {
+    text-decoration: none;
+    color: limegreen;
+    display: block;
+    font-size: inherit;
+}
+
+.menu .selected a {
+    color: lime;
+}
+
+.menu .selected::before {
+    font-family: "Bootstrap-icons", serif;
+    content: "\F231";
+    position: absolute;
+    left: -30px;
+    font-size: 20px;
+    color: lime;
+}

@@ -1,0 +1,18 @@
+variables:
+  IMAGE_NAME: "registry.gitlab.com/kdg-ti/the-lab/teams-24-25/project-arcade/webpage"
+  NODE_VERSION: "18"
+  DOCKER_BUILDKIT: 1
+
+build:
+  image: docker:20.10.24
+  services:
+      - docker:dind
+  script:
+    - echo "Building Docker image..."
+    - docker build --build-arg NODE_VERSION=${NODE_VERSION} -t $IMAGE_NAME:$CI_COMMIT_SHA .
+    - docker tag $IMAGE_NAME:$CI_COMMIT_SHA $IMAGE_NAME:latest
+    - echo "Logging into GitLab Container Registry..."
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD registry.gitlab.com
+    - echo "Pushing Docker image to GitLab registry..."
+    - docker push $IMAGE_NAME:$CI_COMMIT_SHA
+    - docker push $IMAGE_NAME:latest
