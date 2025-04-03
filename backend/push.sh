@@ -1,11 +1,7 @@
 #!/bin/bash
 
-# Give your git path from where to push
-GIT_PAT=""  # Store securely!
-# Give your git username
-GIT_USERNAME=""
-# Give your repo url
-REPO_URL=""
+# Load environment variables
+source .env
 
 commit_message="Auto commit - $(date)"
 

@@ -23,10 +23,8 @@ COPY . .
 
 # Create and activate a virtual environment, then install Python dependencies
 RUN python3 -m venv /venv && \
-    /venv/bin/pip install --no-cache-dir gitpython
+    /venv/bin/pip install --no-cache-dir gitpython python-dotenv
 
-RUN git config --global user.name "pepijn_t" && \
-    git config --global user.email "pepijn.theuns@student.kdg.be"
 
 # Build the Spring Boot application
 RUN ./gradlew build -x test

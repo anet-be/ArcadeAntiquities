@@ -4,14 +4,16 @@ import git
 import logging
 from pathlib import Path
 import shutil
+from dotenv import load_dotenv
 
 # Set up logging for better error handling and debugging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
+load_dotenv()
+
 # Constants for file paths and configuration
-# TODO write git repo url where to put your branch
-# GIT_REPO_URL = ""
+GIT_REPO_URL = os.getenv("REPO_URL")
 
 
 def validate_input():
