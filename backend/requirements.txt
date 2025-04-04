@@ -1,2 +1,0 @@
-gitpython
-google-cloud-storage
