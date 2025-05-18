@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  IMAGE_NAME: ghcr.io/anet-be/frontend
   NODE_VERSION: 18
   DOCKER_BUILDKIT: 1
 
